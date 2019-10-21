@@ -1,2 +1,0 @@
-# angularJS-training
-AngularJS Training
