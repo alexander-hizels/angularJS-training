@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+$clr-white: rgb(255, 255, 255);
+$clr-black:  rgba(6, 30, 55, 0.9);
+$clr-gray: rgb(176, 190, 197);
+$clr-dack-blue: #5074ad;
+$letter-hover-clr: rgb(6, 30, 55);
+$ten-px: 10px;
+$font-size: $ten-px+5px;
+
+%vertical-align-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {    
+    font-family: Raleway;
+}
+
+header {
+    background: linear-gradient(-53deg, #00b8d4 14%, #1de9b6 86%);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &__container {
+        @extend .container;
+        min-height: 59px;
+    }
+    &__sign-up__btn {
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        border-radius: 2px;
+        font-size: 12px;
+        height: 25px;
+        width: 80px;
+        &:hover {
+          background-color: rgb(29, 233, 182);
+        }
+      }  
+}
+.logo {
+      display:flex;       
+      &__img {
+        margin-right: 10px;
+      }
+      &__descr {
+        display: flex;
+        flex-direction: column;
+     }
+      &__slogan {          
+          color: $clr-white;
+          font-size:$font-size;
+            line-height: $font-size;
+          text-align: left;
+          text-transform: uppercase;
+          &_bold {
+              font-weight: bold;
+        }
+      }
+  }
+ 
+ 
+
+
+.footer {
+    background-color: $clr-fb-border;
+    &__container {
+        @extend .container;
+        padding: 105px;
+    }
+    &__top {
+        margin-bottom: 54px;
+    } 
+    &__top, 
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        transition: .9s;
+        &:hover{
+            color: rgb(176, 190, 197);
+        }
+        &_dark {
+            color: rgb(176, 190, 197);
+            &:hover {
+                color: $clr-white;
+            }
+        }
+    }
+}
+
+.footer__policies {
+    &__item {
+        &:nth-of-type(1) {
+            padding-left: 0;
+        }
+        
+        &:nth-of-type(n+2) {
+            position: relative;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                border-radius: 2.5px;
+                background-color: rgb(176, 190, 197);
+                position: absolute;
+                top: 40%;
+                left: -20px;
+            }
+            &:hover {
+                &:before {
+                    background-color: $clr-white;
+                }
+    
+            }
+        }
+        &+.footer__policies__item {
+            margin-left: 44px;
+        }
+    }
+}
