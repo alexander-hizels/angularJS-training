@@ -6,3 +6,4 @@ angular.module('logoDirective', [])
             restrict: "E"
         };
     });
+    

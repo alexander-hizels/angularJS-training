@@ -29,10 +29,6 @@ html {
     font-family: Raleway;
 }
 
-// header {
-//     background: linear-gradient(-53deg, #00b8d4 14%, #1de9b6 86%);
-// }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -64,7 +60,7 @@ html {
           color: $clr-blue-lt;
           cursor: pointer;
         }
-      }  
+    }  
 }
 
 %srch-input {
@@ -96,7 +92,7 @@ html {
 }
 
 .logo {
-    display:flex;       
+    display: flex;       
     &__img {
       margin-right: $ten-px;
     }

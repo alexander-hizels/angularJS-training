@@ -9,3 +9,4 @@ angular.module('appCourseDirective', ['appCourseFormDirective'])
             restrict: "E"
         };
     });
+    

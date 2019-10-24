@@ -13,3 +13,4 @@ angular.module('homeDirective', [])
       restrict: "E"
     };
   });
+  

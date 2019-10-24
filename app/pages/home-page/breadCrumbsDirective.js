@@ -6,3 +6,4 @@ angular.module('breadCrumbsDirective', [])
             restrict: "E"
         };
     });
+    
