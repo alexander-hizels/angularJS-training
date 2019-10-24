@@ -1,10 +1,8 @@
-angular.module('appCourseFormDirective',[])
-.directive('courseForm', function () {
-  return {
-    scope: false,
-    templateUrl: "/pages/home-page/tmp/courseForm.tmp.html",
-    link: function (scope, element, attrs) {
-    },
-    restrict: "EACM"
-  };
-});
+angular.module('appCourseFormDirective', [])
+    .directive('appCourseForm', function () {
+        return {
+            scope: false,
+            templateUrl: "/pages/home-page/tmp/courseForm.tmp.html",
+            restrict: "E"
+        };
+    });

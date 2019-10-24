@@ -1,15 +1,14 @@
-var coursesDirective = angular.module('appCoursesDirective', [
+angular.module('appCoursesDirective', [
     'appCourseDirective',
     'appCoursesService',
-    'appCoursesController'
-])
-    .directive('courses', function () {
+    'appCoursesController'])
+    .directive('appCourses', function () {
         return {
             scope: false,
             templateUrl: "/pages/home-page/tmp/courses.tmp.html",
             link: function (scope, element, attrs) {
 
             },
-            restrict: "EACM"
+            restrict: "E"
         };
     });

@@ -28,6 +28,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         server: { // Определяем параметры сервера
             baseDir: 'app' // Директория для сервера - app
         },
+        port : 8100,
         notify: false // Отключаем уведомления
     });
 });

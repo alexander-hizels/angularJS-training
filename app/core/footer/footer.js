@@ -7,11 +7,7 @@ angular.module('footerDirective',[])
     templateUrl: "/core/footer/tmp/footer.tmp.html",
     link: function (scope, element, attrs) {
       scope.data = scope[attrs["title"]];
-      console.log('header-title attrs.title', attrs.title);
-      console.log('header-title scope', scope);
-      console.log('header-title attrs', attrs);
-
     },
-    restrict: "EACM"
+    restrict: "E"
   };
 });

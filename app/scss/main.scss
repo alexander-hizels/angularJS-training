@@ -4,13 +4,20 @@
     padding: 0;    
 }
 
-$clr-white: rgb(255, 255, 255);
-$clr-black:  rgba(6, 30, 55, 0.9);
-$clr-gray: rgb(176, 190, 197);
-$clr-dack-blue: #5074ad;
-$letter-hover-clr: rgb(6, 30, 55);
+$clr-white: #ffffff;
+$clr-bg-white: #ffffffee;
+$clr-black:  #061e37e6;
+$clr-gray: #b0bec5;
+$clr-green: #19b849;
+$clr-blue: #195eb8;
+$clr-blue-lt: #03b4fa;
+$clr-blue-dark: #5074ad;
+$clr-ft-border: #061e37;
+$letter-hover-clr: #061e37;
+
 $ten-px: 10px;
 $font-size: $ten-px+5px;
+$input-padding: $ten-px;
 
 %vertical-align-flex {
     display: flex;
@@ -22,70 +29,202 @@ html {
     font-family: Raleway;
 }
 
-header {
-    background: linear-gradient(-53deg, #00b8d4 14%, #1de9b6 86%);
-}
+// header {
+//     background: linear-gradient(-53deg, #00b8d4 14%, #1de9b6 86%);
+// }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+%main-container {
+    @extend .container;
+    padding: $ten-px $ten-px*2;
+    background-color: $clr-gray;
+}
+
 .header {
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    background-color: $clr-ft-border;
     &__container {
-        @extend .container;
-        min-height: 59px;
+        @extend %main-container;
+        min-height: $ten-px*10;
     }
-    &__sign-up__btn {
+    &__sign-up__btn,
+    &__log-out__btn {
         background-color: transparent;
-        border: 1px solid #ffffff;
-        color: #ffffff;
-        border-radius: 2px;
-        font-size: 12px;
-        height: 25px;
-        width: 80px;
+        color: $clr-white;
+        border: none;
+        text-align: center;
+        padding: $ten-px $ten-px*2;
         &:hover {
-          background-color: rgb(29, 233, 182);
+          color: $clr-blue-lt;
+          cursor: pointer;
         }
       }  
 }
-.logo {
-      display:flex;       
-      &__img {
-        margin-right: 10px;
-      }
-      &__descr {
-        display: flex;
-        flex-direction: column;
-     }
-      &__slogan {          
-          color: $clr-white;
-          font-size:$font-size;
-            line-height: $font-size;
-          text-align: left;
-          text-transform: uppercase;
-          &_bold {
-              font-weight: bold;
-        }
-      }
-  }
- 
- 
 
+%srch-input {
+    border-radius: 5px;
+    border-width: 1px;
+    border-color:  $clr-ft-border;
+    border-style: solid;
+    padding: $input-padding;
+    margin-bottom: $input-padding;
+}
+
+%btn {
+    border-radius: 5px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+%courses-btn {
+    @extend %btn;
+    padding: $ten-px $ten-px*2;
+    color: $clr-white;
+    background-color: $clr-blue-lt;
+    border-radius: $ten-px/2;
+    &:hover {
+        background-color: $clr-blue-dark;        
+    }
+}
+
+.logo {
+    display:flex;       
+    &__img {
+      margin-right: $ten-px;
+    }
+    &__descr {
+      display: flex;
+      flex-direction: column;
+   }
+    &__slogan {          
+        color: $clr-white;
+        font-size:$font-size;
+        line-height: $font-size;
+        text-align: left;
+        text-transform: uppercase;
+        &_bold {
+            font-weight: bold;
+        }
+    }
+}
+
+.bread-crumbs {
+    padding: $ten-px $ten-px*2;
+    @extend .container;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    &__container {
+        @extend %main-container;
+    }
+    &__box  {
+        width: 80%;
+    }
+    &__input {
+        @extend %srch-input;
+    }
+    &__btn {
+        @extend %btn;
+        background-color: $clr-green;
+        padding: $ten-px $ten-px*3;
+    }
+    &__add-btn {
+        @extend %courses-btn;
+        align-self: flex-end;
+        display: inline-block;
+        width: 200px;
+        background-color: $clr-blue-lt;
+        padding: $ten-px $ten-px*2;
+    }
+}
+
+.courses {
+    &__container {
+        @extend %main-container;
+    }
+    &__load {
+        text-align: center;
+        padding: $ten-px*2;
+        margin-bottom: $ten-px*2;
+        background-color: $clr-bg-white;
+        border-radius: $ten-px;
+        &__link {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.course-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+$course-box-title-h: $ten-px*4.2;
+.course {
+    display: flex;
+    justify-content: space-between;
+    &__container {        
+        padding: $ten-px*2;
+        margin-bottom: $ten-px*2;
+        background-color: $clr-bg-white;
+        border-radius: $ten-px;
+    }
+    &__box-data {
+        max-width: 75%;
+    }
+    &__box-title {
+        display: flex;
+        justify-content: space-between;
+        height: $course-box-title-h;        
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        width: $ten-px*26;
+        padding-top: $course-box-title-h;
+    }
+    &__edit, 
+    &__delete {
+        @extend %courses-btn;
+        display: inline-block;
+        width: $ten-px*12;
+    }
+    &__delete {
+        margin-left: $ten-px;
+    }
+    &__duration,
+    &__date {
+        @extend %btn;
+        background-color: $clr-bg-white;
+    }
+    &__date {
+        margin-left: $ten-px;
+    }
+}
 
 .footer {
-    background-color: $clr-fb-border;
     &__container {
-        @extend .container;
-        padding: 105px;
+        @extend %main-container;
+        background-color: $clr-ft-border;
+        min-height: $ten-px*8;
+        color: $clr-white;
     }
     &__top {
-        margin-bottom: 54px;
+        margin-bottom: $ten-px;        
+    }
+    &__rights {
+        text-align: right;
     } 
-    &__top, 
     &__bottom {
         display: flex;
         justify-content: space-between;
@@ -93,7 +232,7 @@ header {
     }
     &__link {
         transition: .9s;
-        &:hover{
+        &:hover {
             color: rgb(176, 190, 197);
         }
         &_dark {
@@ -101,6 +240,22 @@ header {
             &:hover {
                 color: $clr-white;
             }
+        }
+    }
+}
+
+.menu {
+    list-style: none;
+    text-align: center;
+    &__item {
+      display: inline-block;
+      padding: 0 10px;
+    }
+    &__link {
+        color: $clr-white;
+        text-decoration: none;
+        &:hover {
+            color: $clr-blue-lt;
         }
     }
 }
@@ -136,3 +291,4 @@ header {
         }
     }
 }
+
