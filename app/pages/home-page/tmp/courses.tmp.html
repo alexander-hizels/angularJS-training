@@ -1,0 +1,8 @@
+<section ng-controller="CoursesController" class="courses courses__container">
+        <div ng-repeat="course in getCourses()">
+            <app-course data="course"></app-course>
+        </div>
+        <div class="courses__load">
+            <a href="" class="courses__load__link">load more</a>
+        </div>
+</section>
