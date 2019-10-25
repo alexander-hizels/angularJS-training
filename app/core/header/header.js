@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('myApp.header', ['headerDirective', 'logoDirective']);
-
-angular.module('headerDirective', [])
+angular.module('app.header', [])
     .directive('appHeader', function () {
         return {
             scope: false,

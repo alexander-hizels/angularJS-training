@@ -1,4 +1,4 @@
-angular.module('searchDirective', [])
+angular.module('app.home')
     .directive('appSearch', function () {
         return {
             scope: false,
@@ -6,4 +6,3 @@ angular.module('searchDirective', [])
             restrict: "E"
         };
     });
-    

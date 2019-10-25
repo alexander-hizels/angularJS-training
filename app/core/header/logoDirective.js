@@ -1,4 +1,4 @@
-angular.module('logoDirective', [])
+angular.module('app.header')
     .directive('appLogo', function () {
         return {
             scope: false,
@@ -6,4 +6,3 @@ angular.module('logoDirective', [])
             restrict: "E"
         };
     });
-    

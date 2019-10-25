@@ -1,6 +1,6 @@
-angular.module('myApp.footer', ['footerDirective']);
+angular.module('app.footer', []);
 
-angular.module('footerDirective', [])
+angular.module('app.footer')
     .directive('appFooter', function () {
         return {
             scope: false,

@@ -1,4 +1,4 @@
-angular.module('breadCrumbsDirective', [])
+angular.module('app.home')
     .directive('appBreadCrumbs', function () {
         return {
             scope: false,
@@ -6,4 +6,3 @@ angular.module('breadCrumbsDirective', [])
             restrict: "E"
         };
     });
-    

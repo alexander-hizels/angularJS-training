@@ -1,11 +1,8 @@
-angular.module('myApp.home', [
-  'homeDirective',
-  'breadCrumbsDirective',
-  'appCoursesDirective',
-  'searchDirective'
+angular.module('app.home', [
+  'appCoursesDirective'
 ]);
 
-angular.module('homeDirective', [])
+angular.module('app.home')
   .directive('appHome', function () {
     return {
       scope: false,

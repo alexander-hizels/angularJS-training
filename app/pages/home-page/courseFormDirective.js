@@ -1,4 +1,4 @@
-angular.module('appCourseFormDirective', [])
+angular.module('appCourseDirective')
     .directive('appCourseForm', function () {
         return {
             scope: false,
@@ -6,4 +6,3 @@ angular.module('appCourseFormDirective', [])
             restrict: "E"
         };
     });
-    
