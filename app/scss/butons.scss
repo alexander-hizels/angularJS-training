@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+%btn {
+    border-radius: 5px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+%courses-btn {
+    @extend %btn;
+    padding: $ten-px $ten-px*2;
+    color: $clr-white;
+    background-color: $clr-blue-lt;
+    border-radius: $ten-px/2;
+    &:hover {
+        background-color: $clr-blue-dark;        
+    }
+}

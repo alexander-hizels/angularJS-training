@@ -1,0 +1,44 @@
+@import '../../scss/base.scss';
+
+$course-box-title-h: $ten-px*4.2;
+.course {
+    display: flex;
+    justify-content: space-between;
+    &__container {        
+        padding: $ten-px*2;
+        margin-bottom: $ten-px*2;
+        background-color: $clr-bg-white;
+        border-radius: $ten-px;
+    }
+    &__box-data {
+        max-width: 75%;
+    }
+    &__box-title {
+        display: flex;
+        justify-content: space-between;
+        height: $course-box-title-h;        
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        width: $ten-px*26;
+        padding-top: $course-box-title-h;
+    }
+    &__edit, 
+    &__delete {
+        @extend %courses-btn;
+        display: inline-block;
+        width: $ten-px*12;
+    }
+    &__delete {
+        margin-left: $ten-px;
+    }
+    &__duration,
+    &__date {
+        @extend %btn;
+        background-color: $clr-bg-white;
+    }
+    &__date {
+        margin-left: $ten-px;
+    }
+}
