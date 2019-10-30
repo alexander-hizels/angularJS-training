@@ -30,8 +30,4 @@ gulp.task('clean', function() {
 
 gulp.task('watch', function() {
     gulp.watch(scssFilesPath, gulp.series('sass'));
-    // gulp.watch(jsFilesPath, gulp.series('js'));
-
 });
-
-gulp.task('default', gulp.parallel('sass'));
