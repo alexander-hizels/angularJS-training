@@ -1,10 +1,12 @@
-angular.module('appUserService', []).
-    factory('userService', function () {
+'use strict';
+
+angular.module('appUserService', [])
+    .factory('userService', function() {
         return {
-            courses: [{
+            courses: [ {
                 id: 1,
                 firstName: 'Vasy',
-                LastName: 'Pupkin',
+                LastName: 'Pupkin'
             }, {
                 id: 2,
                 firstName: 'Joan',
@@ -21,6 +23,6 @@ angular.module('appUserService', []).
                 id: 5,
                 firstName: 'Yohji',
                 LastName: 'Yamamoto'
-            }]
+            } ]
         };
     });
