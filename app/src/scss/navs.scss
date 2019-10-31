@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+.menu {
+  list-style: none;
+  text-align: center;
+  &__item {
+    display: inline-block;
+    padding: 0 $ten-px;
+  }
+  &__link {
+    color: $clr-white;
+    text-decoration: none;
+    &:hover {
+      color: $clr-blue-lt;
+    }
+  }
+}

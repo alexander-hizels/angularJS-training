@@ -1,0 +1,24 @@
+@import "../../scss/base.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $clr-ft-border;
+  &__container {
+    @extend %main-container;
+    min-height: $ten-px * 10;
+  }
+  &__sign-up__btn,
+  &__log-out__btn {
+    background-color: transparent;
+    color: $clr-white;
+    border: none;
+    text-align: center;
+    padding: $ten-px $ten-px * 2;
+    &:hover {
+      color: $clr-blue-lt;
+      cursor: pointer;
+    }
+  }
+}

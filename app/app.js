@@ -9,7 +9,7 @@ angular.module('myApp', [
 ]).config(function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: '/pages/home-page/homePage.tpl.html'
+            templateUrl: 'src/pages/home-page/homePage.tpl.html'
         });
     $routeProvider.otherwise({ redirectTo: '/' });
 });

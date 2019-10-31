@@ -1,0 +1,22 @@
+@import "../../scss/variables.scss";
+
+.logo {
+  display: flex;
+  &__img {
+    margin-right: $ten-px;
+  }
+  &__descr {
+    display: flex;
+    flex-direction: column;
+  }
+  &__slogan {
+    color: $clr-white;
+    font-size: $font-size;
+    line-height: $font-size;
+    text-align: left;
+    text-transform: uppercase;
+    &_bold {
+      font-weight: bold;
+    }
+  }
+}
