@@ -1,8 +1,7 @@
 @import "../../scss/base.scss";
 
-$course-box-title-h: $ten-px * 4.2;
-$_120-px: $twenty-px * 6;
-$_260-px: $_120-px*2 + $twenty-px;
+$_42-px: 42px;
+
 .course {
   display: flex;
   justify-content: space-between;
@@ -21,21 +20,21 @@ $_260-px: $_120-px*2 + $twenty-px;
   &__box-title {
     display: flex;
     justify-content: space-between;
-    height: $course-box-title-h;
+    height: $_42-px;
   }
 
   &__form {
     display: flex;
     align-items: center;
-    width: $_260-px;
-    padding-top: $course-box-title-h;
+    width: 260px;
+    padding-top: $_42-px;
   }
 
   &__edit,
   &__delete {
     @extend %courses-btn;
     display: inline-block;
-    width: $_120-px;
+    width: 120px;
   }
 
   &__delete {

@@ -8,7 +8,7 @@
 
   &__container {
     @extend %main-container;
-    min-height: $ten-px * 10;
+    min-height: 100px;
   }
 
   &__sign-up__btn,

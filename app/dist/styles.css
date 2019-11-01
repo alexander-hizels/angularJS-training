@@ -114,10 +114,6 @@ body {
 .breadcrumbs {
   padding: 10px 20px; }
 
-.course-form {
-  display: flex;
-  justify-content: flex-end; }
-
 .course__edit, .course__delete, .course__duration, .course__date {
   border-radius: 5px;
   border: none; }
@@ -197,6 +193,10 @@ body {
     background-color: #ffffffee; }
   .course__date {
     margin-left: 10px; }
+
+.course-form {
+  display: flex;
+  justify-content: flex-end; }
 
 .courses__load-btn {
   border-radius: 5px;

@@ -6,7 +6,7 @@
   &__container {
     @extend %main-container;
     background-color: $clr-ft-border;
-    min-height: $ten-px * 8;
+    min-height: 80px;
     color: $clr-white;
   }
 

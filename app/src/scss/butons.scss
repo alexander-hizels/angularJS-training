@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 %btn {
-  border-radius: 5px;
+  border-radius: $_5-px;
   border: none;
 
   &:hover {
@@ -14,7 +14,7 @@
   padding: $ten-px $twenty-px;
   color: $clr-white;
   background-color: $clr-blue-lt;
-  border-radius: $ten-px/2;
+  border-radius: $_5-px;
 
   &:hover {
     background-color: $clr-blue-dark;
