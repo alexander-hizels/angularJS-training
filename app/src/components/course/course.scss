@@ -1,0 +1,53 @@
+@import "../../scss/base.scss";
+
+$_42-px: 42px;
+
+.course {
+  display: flex;
+  justify-content: space-between;
+
+  &__container {
+    padding: $twenty-px;
+    margin-bottom: $twenty-px;
+    background-color: $clr-bg-white;
+    border-radius: $ten-px;
+  }
+
+  &__box-data {
+    max-width: 75%;
+  }
+
+  &__box-title {
+    display: flex;
+    justify-content: space-between;
+    height: $_42-px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    padding-top: $_42-px;
+  }
+
+  &__edit,
+  &__delete {
+    @extend %courses-btn;
+    display: inline-block;
+    width: 120px;
+  }
+
+  &__delete {
+    margin-left: $ten-px;
+  }
+
+  &__duration,
+  &__date {
+    @extend %btn;
+    background-color: $clr-bg-white;
+  }
+
+  &__date {
+    margin-left: $ten-px;
+  }
+}

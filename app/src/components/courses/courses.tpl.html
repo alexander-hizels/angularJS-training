@@ -1,0 +1,6 @@
+<section ng-controller="CoursesController" class="courses courses__container">
+    <app-course ng-repeat="course in getCourses() | limitTo:coursesLimit" data="course"></app-course>
+    <div class="courses__load">
+        <button class="courses__load-btn" ng-click="loadMore()">load more</button>
+    </div>
+</section>

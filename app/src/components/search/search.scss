@@ -1,0 +1,42 @@
+@import "../../scss/base.scss";
+
+%srch-input {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: $clr-ft-border;
+  border-style: solid;
+  padding: $ten-px;
+  margin-bottom: $ten-px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    @extend %main-container;
+  }
+
+  &__box {
+    width: 80%;
+  }
+
+  &__input {
+    @extend %srch-input;
+  }
+
+  &__btn {
+    @extend %btn;
+    background-color: $clr-green;
+    padding: $ten-px $thirty-px;
+  }
+
+  &__add-btn {
+    @extend %courses-btn;
+    align-self: flex-end;
+    display: inline-block;
+    width: 200px;
+    background-color: $clr-blue-lt;
+    padding: $ten-px $twenty-px;
+  }
+}

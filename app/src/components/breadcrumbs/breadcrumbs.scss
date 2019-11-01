@@ -1,0 +1,6 @@
+@import "../../scss/base.scss";
+
+.breadcrumbs {
+  padding: $ten-px $twenty-px;
+  @extend .container;
+}
