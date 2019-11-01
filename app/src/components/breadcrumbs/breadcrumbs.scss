@@ -1,6 +1,6 @@
 @import "../../scss/base.scss";
 
-.bread-crumbs {
-  padding: $ten-px $ten-px * 2;
+.breadcrumbs {
+  padding: $ten-px $twenty-px;
   @extend .container;
 }

@@ -5,33 +5,38 @@
   border-width: 1px;
   border-color: $clr-ft-border;
   border-style: solid;
-  padding: $input-padding;
-  margin-bottom: $input-padding;
+  padding: $ten-px;
+  margin-bottom: $ten-px;
 }
 
 .search {
   display: flex;
   flex-direction: column;
+
   &__container {
     @extend %main-container;
   }
+
   &__box {
     width: 80%;
   }
+
   &__input {
     @extend %srch-input;
   }
+
   &__btn {
     @extend %btn;
     background-color: $clr-green;
-    padding: $ten-px $ten-px * 3;
+    padding: $ten-px $thirty-px;
   }
+
   &__add-btn {
     @extend %courses-btn;
     align-self: flex-end;
     display: inline-block;
     width: 200px;
     background-color: $clr-blue-lt;
-    padding: $ten-px $ten-px * 2;
+    padding: $ten-px $twenty-px;
   }
 }

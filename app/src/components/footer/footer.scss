@@ -2,30 +2,38 @@
 
 .footer {
   flex: 0 0 auto;
+
   &__container {
     @extend %main-container;
     background-color: $clr-ft-border;
     min-height: $ten-px * 8;
     color: $clr-white;
   }
+
   &__top {
     margin-bottom: $ten-px;
   }
+
   &__rights {
     text-align: right;
   }
+
   &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   &__link {
     transition: 0.9s;
+
     &:hover {
       color: rgb(176, 190, 197);
     }
+
     &_dark {
       color: rgb(176, 190, 197);
+
       &:hover {
         color: $clr-white;
       }
@@ -41,6 +49,7 @@
 
     &:nth-of-type(n + 2) {
       position: relative;
+
       &:before {
         content: "";
         display: inline-block;
@@ -52,12 +61,14 @@
         top: 40%;
         left: -20px;
       }
+
       &:hover {
         &:before {
           background-color: $clr-white;
         }
       }
     }
+
     & + .footer__policies__item {
       margin-left: 44px;
     }

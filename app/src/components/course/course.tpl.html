@@ -3,9 +3,16 @@
         <div class="course__box-title">
             <h2>{{data.title}}</h2>
             <div>
-                <button class="course__duration"><i class="fa fa-clock-o" aria-hidden="true"></i> {{data.duration}} min </button>
-                <button class="course__date"><i class="fa fa-calendar" aria-hidden="true"></i> {{data.date}}</button></div>
+                <button class="course__duration">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    {{data.duration}} min
+                </button>
+                <button class="course__date">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    {{data.date}}
+                </button>
             </div>
+        </div>
         <p>{{data.description}}</p>
     </div>
     <app-course-form class="course-form"></app-course-form>
