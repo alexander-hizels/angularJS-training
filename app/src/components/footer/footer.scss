@@ -1,0 +1,76 @@
+@import "../../scss/base.scss";
+
+.footer {
+  flex: 0 0 auto;
+
+  &__container {
+    @extend %main-container;
+    background-color: $clr-ft-border;
+    min-height: 80px;
+    color: $clr-white;
+  }
+
+  &__top {
+    margin-bottom: 10px;
+  }
+
+  &__rights {
+    text-align: right;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    transition: 0.9s;
+
+    &:hover {
+      color: rgb(176, 190, 197);
+    }
+
+    &_dark {
+      color: rgb(176, 190, 197);
+
+      &:hover {
+        color: $clr-white;
+      }
+    }
+  }
+}
+
+.footer__policies {
+  &__item {
+    &:nth-of-type(1) {
+      padding-left: 0;
+    }
+
+    &:nth-of-type(n + 2) {
+      position: relative;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 2.5px;
+        background-color: rgb(176, 190, 197);
+        position: absolute;
+        top: 40%;
+        left: -20px;
+      }
+
+      &:hover {
+        &:before {
+          background-color: $clr-white;
+        }
+      }
+    }
+
+    & + .footer__policies__item {
+      margin-left: 44px;
+    }
+  }
+}
