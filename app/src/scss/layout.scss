@@ -22,6 +22,7 @@ body {
 
 .content {
   flex: 1 0 auto;
+  background-color: $clr-gray;
 }
 
 .footer {
@@ -35,7 +36,6 @@ body {
 %main-container {
   @extend .container;
   padding: 10px 20px;
-  background-color: $clr-gray;
 }
 
 %vertical-align-flex {

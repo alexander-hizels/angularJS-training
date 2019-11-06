@@ -7,7 +7,7 @@ angular.module('appBorderDateDirective', [])
     .directive('appBorderColor', function() {
         return {
             scope: false,
-            link: function(scope, element, attrs) {
+            link: function(scope, element) {
                 var date = scope.course.date.getTime();
                 var now = Date.now();
                 if (date < now && date > now - 14 * MLSEC_A_DAY) {
