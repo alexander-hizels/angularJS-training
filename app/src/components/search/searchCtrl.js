@@ -8,7 +8,7 @@ angular.module('appSearchController', [
         function($scope, searchTransferService) {
             $scope.searchText = '';
 
-            $scope.logSearchText = function() {
+            $scope.setSearchText = function() {
                 searchTransferService.setSearchValue($scope.searchText);
             };
         }
