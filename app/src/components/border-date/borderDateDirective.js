@@ -8,11 +8,11 @@ angular.module('appBorderDateDirective', [])
         return {
             scope: false,
             link: function(scope, element) {
-                var date = scope.course.date.getTime();
-                var now = Date.now();
-                if (date < now && date > now - 14 * MLSEC_A_DAY) {
+                var courseDate = scope.course.date.getTime();
+                var currentDate = Date.now();
+                if (courseDate < currentDate && courseDate > currentDate - 14 * MLSEC_A_DAY) {
                     element.addClass('border-' + COLORS.green);
-                } else if (date > now) {
+                } else if (courseDate > currentDate) {
                     element.addClass('border-' + COLORS.blue);
                 }
             },

@@ -1,14 +1,14 @@
 <section ng-controller="CoursesController" class="courses courses__container">
-    <app-course ng-repeat="course in getCourses() | limitTo:coursesLimit
+    <app-course ng-repeat="course in courses | limitTo:coursesLimit
                                                   | filter: getFilterValue()
                                                   | orderBy: orderByDate"
                 data="course"
-                ng-if="getCourses()"></app-course>
+                ng-if="courses"></app-course>
     <div class="courses__load"
          ng-if="getCourses()">
         <button class="courses__load-btn" ng-click="loadMore()">load more</button>
     </div>
-    <p class="courses__load" ng-if="!getCourses()">
+    <p class="courses__load" ng-if="!courses">
         {{dataMessage | uppercase}}
     </p>
 </section>

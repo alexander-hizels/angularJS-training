@@ -7,6 +7,7 @@ function CoursesController($scope, coursesService, searchTransferService) {
 
     this.$onInit = function() {
         console.log('$onInit');
+        $scope.courses = coursesService.courses;
     };
 
     this.$onChanges = function() {
@@ -15,10 +16,6 @@ function CoursesController($scope, coursesService, searchTransferService) {
 
     $scope.coursesLimit = 2;
     $scope.dataMessage = 'no data. feel free to add new course';
-
-    $scope.getCourses = function() {
-        return coursesService.courses;
-    };
 
     $scope.loadMore = function() {
         $scope.coursesLimit += 1;
