@@ -1,7 +1,7 @@
 'use strict';
 
-var colors = { blue: 'blue', green: 'green' };
-var milisecInDay = 86400000;
+var COLORS = { blue: 'blue', green: 'green' };
+var MLSEC_A_DAY = 86400000;
 
 angular.module('appBorderDateDirective', [])
     .directive('appBorderColor', function() {
@@ -10,11 +10,10 @@ angular.module('appBorderDateDirective', [])
             link: function(scope, element, attrs) {
                 var date = scope.course.date.getTime();
                 var now = Date.now();
-                if (date < now && date > now - 14 * milisecInDay) {
-                    element.addClass('border-' + colors.green);
-                }
-                if (date > now) {
-                    element.addClass('border-' + colors.blue);
+                if (date < now && date > now - 14 * MLSEC_A_DAY) {
+                    element.addClass('border-' + COLORS.green);
+                } else if (date > now) {
+                    element.addClass('border-' + COLORS.blue);
                 }
             },
             restrict: 'A'

@@ -5,8 +5,8 @@ angular.module('appSearchDataTransferService', [])
         var self = this;
         self.searchData = ' ';
 
-        self.setSearchValue = function(x) {
-            self.searchData = x;
+        self.setSearchValue = function(val) {
+            self.searchData = val;
         };
 
         self.getSearchValue = function() {
