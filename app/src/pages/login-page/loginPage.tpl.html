@@ -1,0 +1,60 @@
+<app-header-auth></app-header-auth>
+<section class="login login__container">
+    <form name="loginForm"
+          class="form login__form"
+          ng-submit="ctrl.formSubmit(loginForm)"
+          novalidate
+          ng-controller="LoginCtrl as ctrl">
+        <h2 class="form__title">Login</h2>
+        <div class="form__group">
+            <label class="form__label">
+                User name
+                <input type="text"
+                       class="form__control"
+                       name="username"
+                       required
+                       ng-model="ctrl.user.name"
+                       placeholder="username"
+                />
+            </label>
+            <span ng-show="loginForm.username.$touched && loginForm.username.$invalid"
+                  class="form__error-message">
+                <span ng-show="loginForm.username.$error.required">
+                    The name is required.
+                </span>
+            </span>
+        </div>
+
+        <div class="form__group">
+            <label class="form__label">
+                Password
+                <input type="password"
+                       class="form__control"
+                       name="password"
+                       required
+                       ng-model="ctrl.user.password"
+                       placeholder="password"
+                />
+            </label>
+            <span ng-show="loginForm.password.$touched && loginForm.password.$invalid"
+                  class="form__error-message">
+                <span ng-show="loginForm.password.$error.required">
+                    The password is required.
+                </span>
+            </span>
+        </div>
+
+        <div class="form__btn-box">
+            <a href="/">Forgot password</a>
+            <button ng-disabled="!loginForm.$valid"
+                    type="submit"
+                    class="login__btn">
+                Login
+            </button>
+        </div>
+        <div class="form__error-message"
+             ng-show="ctrl.message.text">
+            {{ctrl.message.text}}
+        </div>
+    </form>
+</section>
