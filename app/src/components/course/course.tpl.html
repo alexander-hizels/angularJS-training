@@ -1,0 +1,22 @@
+<div class="course course__container" app-border-color>
+    <div class="course__box-data">
+        <div class="course__box-title">
+            <h2>
+                {{data.title | uppercase }}
+                <span ng-if="data.topRated"> I <i class="fa fa-star-o" aria-hidden="true"></i></span>
+            </h2>
+            <div>
+                <button class="course__duration">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    {{data.duration | formatDuration }}
+                </button>
+                <button class="course__date">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    {{data.date | date:'dd.MM.yyyy'}}
+                </button>
+            </div>
+        </div>
+        <p>{{data.description}}</p>
+    </div>
+    <app-course-form class="course-form"></app-course-form>
+</div>

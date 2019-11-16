@@ -1,0 +1,32 @@
+@import "../../scss/base.scss";
+
+.courses {
+  &__container {
+    @extend %main-container;
+  }
+
+  &__load {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: $clr-bg-white;
+    border-radius: 10px;
+
+    &__link {
+      text-transform: uppercase;
+    }
+  }
+
+  &__load-btn {
+    @extend %btn;
+    display: inline-block;
+    width: 200px;
+    background-color: $clr-blue-lt;
+    padding: $padding;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $clr-blue-dark;
+    }
+  }
+}
