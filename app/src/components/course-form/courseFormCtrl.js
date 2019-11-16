@@ -3,7 +3,7 @@
 angular.module('appCourseFormController', [])
     .controller('CourseFormController', CourseFormController);
 
-function CourseFormController($scope, $rootScope, coursesService) {
+function CourseFormController($scope, coursesService) {
     var self = this;
     self.delete = function() {
         coursesService.remove($scope.data.id);

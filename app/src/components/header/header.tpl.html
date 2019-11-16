@@ -7,15 +7,17 @@
                 Hi, {{headerCtrl.userName}}
             </button>
             <button class="header__log-out__btn"
-                    ng-if="headerCtrl.isAuthenticated">
+                    ng-if="headerCtrl.isAuthenticated"
+                    ng-click="headerCtrl.logout()">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 Log out
             </button>
-            <button class="header__sign-up__btn"
-                    ng-if="!headerCtrl.isAuthenticated">
+            <a class="header__sign-up__btn"
+               ng-if="!headerCtrl.isAuthenticated"
+               href="/#!/login">
                 <i class="fa fa-sign-up" aria-hidden="true"></i>
                 Sign up
-            </button>
+            </a>
         </div>
     </div>
 </header>

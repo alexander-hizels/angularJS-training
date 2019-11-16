@@ -733,7 +733,8 @@ body {
     color: #ffffff;
     border: none;
     text-align: center;
-    padding: 10px 20px; }
+    padding: 10px 20px;
+    text-decoration: none; }
     .header__sign-up__btn:hover, .header__log-out__btn:hover {
       color: #03b4fa;
       cursor: pointer; }

@@ -19,12 +19,17 @@ function HeaderController(authService, userService) {
     vm.$onInit = function() {
         vm.userName = 'guest';
         vm.isAuthenticated = authService.isUserGuard();
-        console.log(vm.isAuthenticated);
         if (vm.isAuthenticated) {
             var user = userService.getCurrentUser();
             if (user) {
                 vm.userName = user.firstName;
             }
         }
+    };
+
+    vm.logout = function() {
+        authService.logout();
+        vm.userName = 'guest';
+        vm.isAuthenticated = false;
     };
 }
