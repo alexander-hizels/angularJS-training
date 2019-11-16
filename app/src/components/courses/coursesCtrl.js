@@ -8,12 +8,7 @@ function CoursesController($scope, $rootScope, coursesService, searchTransferSer
     this.$onInit = function() {
         console.log('$onInit');
         $scope.courses = coursesService.getListCourses();
-        // self.notify = $rootScope.$on('notifying-service-event', function() {
-        //     console.log('notifying-service-event');
-        //     $scope.courses = coursesService.getListCourses();
-        // });
         coursesService.subscribe($scope, function somethingChanged() {
-            console.log('notifying-service-event');
             $scope.courses = coursesService.getListCourses();
         });
     };

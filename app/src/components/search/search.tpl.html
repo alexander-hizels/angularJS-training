@@ -3,5 +3,5 @@
         <input type="text" class="search__input" placeholder="Text to search" ng-model="searchText">
         <button class="search__btn" ng-click="setSearchText()">Search</button>
     </div>
-    <button class="search__add-btn"  ng-click="addCourse()">Add course</button>
+    <button ng-if="isAuth" class="search__add-btn"  ng-click="addCourse()">Add course</button>
 </section>

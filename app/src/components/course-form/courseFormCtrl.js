@@ -4,12 +4,14 @@ angular.module('appCourseFormController', [])
     .controller('CourseFormController', CourseFormController);
 
 function CourseFormController($scope, coursesService) {
-    var self = this;
-    self.delete = function() {
-        coursesService.remove($scope.data.id);
+    var vm = this;
+    vm.delete = function() {
+        if (confirm('Are you sure you want to delete course?')) {
+            coursesService.remove($scope.data.id);
+        }
     };
 
-    self.update = function(course) {
+    vm.update = function(course) {
         coursesService.update($scope.data);
     };
 

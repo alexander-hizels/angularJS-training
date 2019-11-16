@@ -5,13 +5,12 @@ angular.module('appSearchController', [
 ])
     .controller(
         'SearchCtrl',
-        function($scope, searchTransferService, coursesService, $location) {
+        function($scope, searchTransferService, coursesService, authService) {
             $scope.searchText = '';
+            $scope.isAuth = authService.isAuthenticated();
 
             $scope.setSearchText = function() {
                 searchTransferService.setSearchValue($scope.searchText);
-                // console.log($location.path());
-                // $location.path('/login');
             };
 
             $scope.addCourse = function() {
