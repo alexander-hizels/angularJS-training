@@ -1,11 +1,11 @@
-<section ng-controller="CoursesController" class="courses courses__container">
+<section ng-controller="CoursesController as CourseCtrl" class="courses courses__container">
     <app-course ng-repeat="course in courses | limitTo:coursesLimit
                                                   | filter: getFilterValue()
                                                   | orderBy: orderByDate"
                 data="course"
                 ng-if="courses"></app-course>
     <div class="courses__load"
-         ng-if="getCourses()">
+         ng-if="courses">
         <button class="courses__load-btn" ng-click="loadMore()">load more</button>
     </div>
     <p class="courses__load" ng-if="!courses">

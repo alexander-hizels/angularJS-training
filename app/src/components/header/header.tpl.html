@@ -4,11 +4,17 @@
         <div class="header__sign-up">
             <button class="header__sign-up__btn">
                 <i class="fa fa-user-plus" aria-hidden="true"></i>
-                User login
+                Hi, {{headerCtrl.userName}}
             </button>
-            <button class="header__log-out__btn">
+            <button class="header__log-out__btn"
+                    ng-if="headerCtrl.isAuthenticated">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                 Log out
+            </button>
+            <button class="header__sign-up__btn"
+                    ng-if="!headerCtrl.isAuthenticated">
+                <i class="fa fa-sign-up" aria-hidden="true"></i>
+                Sign up
             </button>
         </div>
     </div>

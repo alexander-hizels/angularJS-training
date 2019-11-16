@@ -3,11 +3,19 @@
 angular.module('appCoursesDirective')
     .controller('CoursesController', CoursesController);
 
-function CoursesController($scope, coursesService, searchTransferService) {
-
+function CoursesController($scope, $rootScope, coursesService, searchTransferService) {
+    var self = this;
     this.$onInit = function() {
         console.log('$onInit');
-        $scope.courses = coursesService.courses;
+        $scope.courses = coursesService.getListCourses();
+        // self.notify = $rootScope.$on('notifying-service-event', function() {
+        //     console.log('notifying-service-event');
+        //     $scope.courses = coursesService.getListCourses();
+        // });
+        coursesService.subscribe($scope, function somethingChanged() {
+            console.log('notifying-service-event');
+            $scope.courses = coursesService.getListCourses();
+        });
     };
 
     this.$onChanges = function() {
@@ -19,6 +27,11 @@ function CoursesController($scope, coursesService, searchTransferService) {
 
     $scope.loadMore = function() {
         $scope.coursesLimit += 1;
+        $scope.courses = coursesService.getListCourses();
+    };
+
+    self.update = function() {
+        $scope.courses = coursesService.getListCourses();
     };
 
     $scope.orderByDate = function(course) {

@@ -1,6 +1,14 @@
-<form class="course__form">
+<form class="course__form" ng-controller="CourseFormController as ctrl">
     <div class="course__box-btns">
-        <button class="course__edit"><i class="fa fa-pencil" aria-hidden="true"></i> edit</button>
-        <button class="course__delete"><i class="fa fa-trash" aria-hidden="true"></i> delete</button>
+        <button class="course__edit"
+                ng-click="ctrl.update()">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            edit
+        </button>
+        <button class="course__delete"
+                ng-click="ctrl.delete()">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+            delete
+        </button>
     </div>
 </form>
