@@ -14,5 +14,4 @@ function CourseFormController($scope, coursesService) {
     vm.update = function(course) {
         coursesService.update($scope.data);
     };
-
 }
