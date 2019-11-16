@@ -86,12 +86,12 @@ angular.module('appCoursesService', [])
         }
 
         function subscribe(scope, callback) {
-            var handler = $rootScope.$on('NOTIFY_COURSES', callback);
+            var handler = $rootScope.$on(NOTIFY_COURSES, callback);
             scope.$on('$destroy', handler);
         }
 
         function notify() {
-            $rootScope.$emit('NOTIFY_COURSES');
+            $rootScope.$emit(NOTIFY_COURSES);
         }
 
         return {

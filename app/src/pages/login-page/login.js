@@ -20,7 +20,7 @@ angular.module('app.login')
 angular.module('app.login')
     .controller(
         'LoginCtrl',
-        function($scope, userService, authService, $location, $window, $timeout) {
+        function(userService, authService, $location, $timeout) {
             var DELAY = 10000;
             var vm = this;
             vm.user = {};
@@ -33,15 +33,11 @@ angular.module('app.login')
                 }, DELAY);
             };
 
-            vm.formSubmit = function(form) {
+            vm.formSubmit = function() {
                 var user = userService.getUserByName(vm.user.name);
                 if (user) {
                     if (user.password === vm.user.password) {
                         authService.login(user);
-                        vm.showMessage({
-                            text: 'Success',
-                            type: 'success'
-                        });
                         $location.path('/home');
                     } else {
                         vm.showMessage({

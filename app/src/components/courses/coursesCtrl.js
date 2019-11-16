@@ -4,8 +4,8 @@ angular.module('appCoursesDirective')
     .controller('CoursesController', CoursesController);
 
 function CoursesController($scope, $rootScope, coursesService, searchTransferService) {
-    var self = this;
-    this.$onInit = function() {
+    var vm = this;
+    vm.$onInit = function() {
         console.log('$onInit');
         $scope.courses = coursesService.getListCourses();
         coursesService.subscribe($scope, function somethingChanged() {
@@ -13,7 +13,7 @@ function CoursesController($scope, $rootScope, coursesService, searchTransferSer
         });
     };
 
-    this.$onChanges = function() {
+    vm.$onChanges = function() {
         console.log('$onChanges');
     };
 
@@ -25,7 +25,7 @@ function CoursesController($scope, $rootScope, coursesService, searchTransferSer
         $scope.courses = coursesService.getListCourses();
     };
 
-    self.update = function() {
+    vm.update = function() {
         $scope.courses = coursesService.getListCourses();
     };
 

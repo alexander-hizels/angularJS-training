@@ -5,9 +5,8 @@ angular.module('appSearchController', [
 ])
     .controller(
         'SearchCtrl',
-        function($scope, searchTransferService, coursesService, authService) {
+        function($scope, searchTransferService, coursesService) {
             $scope.searchText = '';
-            $scope.isAuth = authService.isAuthenticated();
 
             $scope.setSearchText = function() {
                 searchTransferService.setSearchValue($scope.searchText);
