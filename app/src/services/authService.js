@@ -4,7 +4,7 @@ var USER = 'user';
 
 angular.module('appAuthService', [])
     .factory('authService', function($window, jwtService) {
-        var TOKEN = 'token';
+        var TOKEN = 'user_token';
         var isAuth = false;
         var $localStorage = $window.localStorage;
 

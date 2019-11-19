@@ -5,8 +5,9 @@ angular.module('appCourseFormController', [])
 
 function CourseFormController($scope, coursesService) {
     var vm = this;
+    var CONFIRM_MESSAGE = 'Are you sure you want to delete course?';
     vm.delete = function() {
-        if (confirm('Are you sure you want to delete course?')) {
+        if (confirm(CONFIRM_MESSAGE)) {
             coursesService.remove($scope.data.id);
         }
     };

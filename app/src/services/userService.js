@@ -20,7 +20,8 @@ angular.module('appUserService', [])
         }, {
             id: 4,
             firstName: 'Anna',
-            LastName: 'Frank'
+            lastName: 'Frank',
+            password: 'password'
         }, {
             id: 5,
             firstName: 'Yohji',
@@ -34,7 +35,9 @@ angular.module('appUserService', [])
 
         function getUserByName(firstName) {
             return users.find(function(user) {
-                return user.firstName === firstName;
+                console.log(user.firstName.localeCompare(firstName) === 0);
+                var u = (user.firstName.toLocaleLowerCase()).localeCompare(firstName.toLocaleLowerCase()) === 0;
+                return user.firstName.toLocaleLowerCase().localeCompare(firstName.toLocaleLowerCase()) === 0;
             });
         }
 
