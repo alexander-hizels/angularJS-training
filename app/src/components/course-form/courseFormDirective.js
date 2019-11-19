@@ -9,7 +9,8 @@ angular.module(
             scope: false,
             templateUrl: '/src/components/course-form/courseForm.tpl.html',
             controller: [
-                '$scope', 'coursesService',
+                '$scope',
+                'coursesService',
                 CourseFormController
             ],
             controllerAs: 'ctrl',

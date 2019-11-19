@@ -6,8 +6,10 @@ angular.module('app.header', [ 'appAuthService', 'appUserService' ])
             scope: false,
             templateUrl: '/src/components/header/header.tpl.html',
             controller: [
-                'authService', 'userService',
-                HeaderController ],
+                'authService',
+                'userService',
+                HeaderController
+            ],
             controllerAs: 'headerCtrl',
             restrict: 'E'
         };

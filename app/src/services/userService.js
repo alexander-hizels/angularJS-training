@@ -35,8 +35,6 @@ angular.module('appUserService', [])
 
         function getUserByName(firstName) {
             return users.find(function(user) {
-                console.log(user.firstName.localeCompare(firstName) === 0);
-                var u = (user.firstName.toLocaleLowerCase()).localeCompare(firstName.toLocaleLowerCase()) === 0;
                 return user.firstName.toLocaleLowerCase().localeCompare(firstName.toLocaleLowerCase()) === 0;
             });
         }
