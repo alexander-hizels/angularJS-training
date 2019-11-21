@@ -22,24 +22,32 @@
 
 <body>
 
-    <app-header></app-header>
     <ng-view class="content"></ng-view>
     <app-footer class="footer"></app-footer>
 
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-jwt/dist/angular-jwt.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
+    <script src="lib/lodash/lodash.js"></script>
+    <script src="src/services/coursesService.js"></script>
+    <script src="src/services/authService.js"></script>
+    <script src="src/services/jwtService.js"></script>
+    <script src="src/services/userService.js"></script>
+    <script src="src/services/searchDataTransferService.js"></script>
     <script src="src/pages/home-page/home.js"></script>
+    <script src="src/pages/login-page/login.js"></script>
+    <script src="src/components/breadcrumbs/breadcrumbsDirective.js"></script>
+    <script src="src/components/course-form/courseFormCtrl.js"></script>
+    <script src="src/components/course-form/courseFormDirective.js"></script>
     <script src="src/components/course/courseDirective.js"></script>
     <script src="src/components/course/formatDurationFilter.js"></script>
     <script src="src/components/border-date/borderDateDirective.js"></script>
-    <script src="src/components/course-form/courseFormDirective.js"></script>
-    <script src="src/services/coursesService.js"></script>
-    <script src="src/services/searchDataTransferService.js"></script>
     <script src="src/components/courses/coursesDirective.js"></script>
     <script src="src/components/courses/coursesCtrl.js"></script>
     <script src="src/components/footer/footer.js"></script>
     <script src="src/components/header/header.js"></script>
+    <script src="src/components/header-auth/header-auth.js"></script>
     <script src="src/components/logo/logoDirective.js"></script>
     <script src="src/components/search/searchCtrl.js"></script>
     <script src="src/components/search/searchDirective.js"></script>

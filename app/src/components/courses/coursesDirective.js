@@ -2,6 +2,7 @@
 
 angular.module('appCoursesDirective', [
     'appCourseDirective',
+    'appCourseFormDirective',
     'appCoursesService',
     'appBorderDateDirective'
 ])

@@ -2,5 +2,6 @@
 
 .breadcrumbs {
   padding: $padding;
+  background-color: $clr-bg-white;
   @extend .container;
 }

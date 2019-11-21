@@ -5,11 +5,15 @@ angular.module('appSearchController', [
 ])
     .controller(
         'SearchCtrl',
-        function($scope, searchTransferService) {
+        function($scope, searchTransferService, coursesService) {
             $scope.searchText = '';
 
             $scope.setSearchText = function() {
                 searchTransferService.setSearchValue($scope.searchText);
+            };
+
+            $scope.addCourse = function() {
+                coursesService.create();
             };
         }
     );

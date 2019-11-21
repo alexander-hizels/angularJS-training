@@ -3,7 +3,8 @@
 angular.module('app.home', [
     'appCoursesDirective',
     'appSearchDirective',
-    'appSearchDataTransferService'
+    'appSearchDataTransferService',
+    'appCoursesService'
 ]);
 
 angular.module('app.home')
